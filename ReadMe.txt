@@ -12,6 +12,21 @@ Pass -DUSE_CREDENTIAL_STORE=OFF to cmake use disable it. If disabled, QtKeychain
 [CryptProtectData](http://msdn.microsoft.com/en-us/library/windows/desktop/aa380261%28v=vs.85%29.aspx "CryptProtectData function")
 to encrypt the password with the user's logon credentials. The encrypted data is then persisted via QSettings.
 
+##环境作者没有说明怎么编译##
+我参照了https://docs.nextcloud.com/desktop/2.5/building.html#windows-installer-build-cross-compile 这个文档中的
+```cd <qtkeychain Clone Dir>
+cmake -G "MinGW Makefiles" .
+mingw32-make
+cd ..```
+编译了一个版本
+
+
+
+
+
+
+
 In unsupported environments QtKeychain will report an error. It will not store any data unencrypted unless explicitly requested (setInsecureFallback( true )).
 
 **License:** QtKeychain is available under the [Modified BSD License](http://www.gnu.org/licenses/license-list.html#ModifiedBSD). See the file COPYING for details.
+
